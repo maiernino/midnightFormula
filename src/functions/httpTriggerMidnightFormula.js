@@ -31,12 +31,11 @@ app.http('httpTriggerMidnightFormula', {
         if (a === undefined || b === undefined || c === undefined) {
             return { status: 400, body: 'Missing input parameters' };
         }
-        
+
         if (a === null || b === null || c === null) {
             return { status: 400, body: 'Missing input parameters' };
         }
 
-        context.log(`Http function processed request for url "${request.url}"`);
         a = parseInt(a);
         b = parseInt(b);
         c = parseInt(c);
